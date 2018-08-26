@@ -162,7 +162,7 @@ hours = 12;
 }
  
  
-const w = ['./1535219228660.png'];
+const w = ['./1535299521083.png'];
               let Image = Canvas.Image,
                   canvas = new Canvas(557, 241),
                   ctx = canvas.getContext('2d');
