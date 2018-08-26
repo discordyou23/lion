@@ -119,7 +119,7 @@ message.guild.unban(ns);
 });
 
 client.on("guildMemberAdd", member => {
-let welcomer = member.guild.channels.find("name","welcome");
+let welcomer = member.guild.channels.find("name","➥『welcome』-الترحيب");
       if(!welcomer) return;
       if(welcomer) {
          moment.locale('ar-ly');
@@ -141,7 +141,7 @@ let welcomer = member.guild.channels.find("name","welcome");
 
 
 client.on('guildMemberAdd', member => {
-const channel = member.guild.channels.find("name","welcome")
+const channel = member.guild.channels.find("name","➥『welcome』-الترحيب")
 if (member.user.bot) return;
 var Canvas = require('canvas')  
 var jimp = require('jimp')
@@ -458,7 +458,7 @@ client.on("guildMemberAdd", member => {
 
 
   client.on('guildMemberAdd', (member) => {
-  let channel = member.guild.channels.find('name', 'welcome');
+  let channel = member.guild.channels.find('name', '➥『welcome』-الترحيب');
 if(member.user.bot) {
 channel.send(`${member} ♣ولكم يا عمو البوت فرجينا مهاراتك بلأوامر♣`)
 }
