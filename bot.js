@@ -19,7 +19,7 @@ client.on('message', message => {
 
 
 client.on('ready', () => {
-     client.user.setActivity("LIONS BOT/Lhelp",{type: 'LISTENING'});
+     client.user.setActivity("Lhelp|SYSTEM SERVER",{type: 'LISTENING'});
 
 });
 
@@ -455,15 +455,6 @@ client.on("guildMemberAdd", member => {
 
 
 
-
-
-
-  client.on('guildMemberAdd', (member) => {
-  let channel = member.guild.channels.find('name', '➥『welcome』-الترحيب');
-if(member.user.bot) {
-channel.send(`${member} ♣ولكم يا عمو البوت فرجينا مهاراتك بلأوامر♣`)
-}
-})
 
 
 
