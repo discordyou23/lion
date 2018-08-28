@@ -1248,7 +1248,7 @@ client.on('ready', () => {
 
 
 
-const yourID = "343908666887372800";
+const yourID = "382889731316514826";
 const setupCMD = "Lrolereact"
 let initialMessage = `**@everyone  خذ رتبة**
 **اضغط على الريئكشن الي تحت الرتبة عشان تاخذها و عشان تشيلها منك شيل الريئكشن منها** `;
