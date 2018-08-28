@@ -1253,7 +1253,6 @@ client.on('ready', () => {
 
 
 
-if(!prefix) var prefix = "L" ; // البرفكس 
 
 var stopReacord = true;
 var reactionRoles = [];
