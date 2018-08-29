@@ -228,6 +228,8 @@ if (command == "embed") {
     message.delete();
   }
 
+    
+});    
 
 
 
