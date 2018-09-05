@@ -40,6 +40,7 @@ var bc = new
 Discord.RichEmbed()
 .setColor('RANDOM')
 .setTitle('Just Bot')
+.addField('**الرسالة**', args)
 .setThumbnail(message.author.avatarURL)
 .setFooter(copy, client.user.avatarURL);
 m.send({ embed: bc })
