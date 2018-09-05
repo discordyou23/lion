@@ -87,6 +87,15 @@ client.on('message', message => {
 
 
 
+  client.on('typingStart', (ch, user) => {
+    if(user.presence.status === 'offline') {
+        
+        ch.send(`${user} تحزير , لش عامل أوف لاين وعم تكتب`)
+        .then(msg => {
+            msg.delete(10000)
+        })
+    }
+})
 
 
 
@@ -237,6 +246,76 @@ if (command == "embed") {
 });    
 
 
+
+
+
+  client.on('voiceStateUpdate', (codes, ReBeL) => {
+if(ReBeL.voiceChannelID !== "486723111794900992") return console.log("أيرور . ");
+ReBeL.guild.createChannel(ReBeL.user.username , 'voice').then((rebeeel) =>{
+    rebeeel.setParent("486724450876784670");
+ReBeL.guild.members.get(ReBeL.id).setVoiceChannel(rebeeel.id).then((codess) =>{
+  console.log("تــــــم .");
+  let scan = setInterval(()=>{
+if(!ReBeL.voiceChannel) {
+  rebeeel.delete();
+}
+  }, 1700);
+});
+});
+});
+
+
+
+
+
+client.on('message', async message => {
+  if(message.content.startsWith(prefix + "تقديم")) {
+    await message.channel.send("**أولآ اكتب شو تبيع**").then(e => {
+    let filter = m => m.author.id === message.author.id
+    let lan = '';
+    let md = '';
+    let br = '';
+    let chaLan = message.channel.awaitMessages(filter, { max: 1, time: 40000, errors: ['time'] })
+    .then(collected => {
+      lan = collected.first().content
+      collected.first().delete()
+e.delete();
+     message.channel.send('**ثانيآ أكتب كم لك تبيع للناس**').then(m => {
+let chaMd = message.channel.awaitMessages(filter, { max: 1, time: 40000, errors: ['time'] })
+.then(co => {
+  md = co.first().content
+        co.first().delete()
+        m.delete();
+message.channel.send('**وأخيرااا اكتب كم من الوقت سوف تيقى تبيع معنا**').then(ms => {
+let br = message.channel.awaitMessages(filter, { max: 1, time: 40000, errors: ['time'] })
+.then(col => {
+  br = col.first().content
+        col.first().delete()
+
+ms.delete()
+
+ message.channel.send('جاري التقديم للإدارة..').then(b => {
+        setTimeout(() => {
+  b.edit(`**تم التقديم وسيتم الرد فـ اقرب وقت**`)
+        },2000);
+var gg = message.guild.channels.find('name', 'التقديمات')
+if(!gg) return;
+if(gg) {
+gg.send({embed : new Discord.RichEmbed()
+.setDescription(`**  يبيع :question:  : \n ${lan}\nوقت البيع :link: :\n ${md} \nكم سوف يبقى معنا يبيع بسيرفر :question: :\n ${br}  \nتم التقديم بواسطة  : <@${message.author.id}> **`)  
+          .setFooter(`Arab Bots List.`)
+.setTimestamp()
+});
+}        
+})
+})
+})
+})
+})
+})
+})
+ }
+})
 
 
 
