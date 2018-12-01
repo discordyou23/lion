@@ -21,7 +21,10 @@ client.user.setGame(`Royal Force / 5play`);
 });
 
 
-
+client.on('message', msg => {
+  if(msg.content === '5stop')
+  msg.reply('**تم إيقاف الأغنية|✅**')
+});
 
 
 const developers = ["408005403381858304","513666662004686848"]
